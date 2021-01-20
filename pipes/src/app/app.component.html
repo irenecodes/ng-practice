@@ -1,0 +1,30 @@
+<header>
+  <h1>
+    {{ title }}
+  </h1>
+</header>
+<section>
+  <pre>
+    {{ user | json }}
+  </pre>
+</section>
+<section>
+  <p>Hello, my name is {{ user.firstName }} {{ user.lastName }}.</p>
+  <p>
+    This app was last refreshed as of {{ user.todaysDate | date: "short" }}.
+  </p>
+  <p>
+    Time to chain some pipes here:
+    {{ user.todaysDate | date: "MMMM" | uppercase }}
+  </p>
+  <p>
+    Toggle the date format!
+    {{ user.todaysDate | date: format }}
+  </p>
+  <button (click)="toggleFormat()">Toggle the date</button>
+  <form action="">
+    <p>Let's enter some into below:</p>
+    <label for="">Name:</label>
+    <input [(ngModel)]="user.firstName" />
+  </form>
+</section>
