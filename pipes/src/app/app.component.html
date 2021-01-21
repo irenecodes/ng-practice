@@ -1,11 +1,14 @@
 <header>
   <h1>
-    {{ title }}
+    {{ title | uppercase }}
   </h1>
 </header>
 <section>
+  <p>Reference this json:</p>
   <pre>
-    {{ user | json }}
+    <code>
+      {{ user | json }}
+    </code>
   </pre>
 </section>
 <section>
@@ -13,18 +16,45 @@
   <p>
     This app was last refreshed as of {{ user.todaysDate | date: "short" }}.
   </p>
-  <p>
-    Time to chain some pipes here:
-    {{ user.todaysDate | date: "MMMM" | uppercase }}
-  </p>
-  <p>
-    Toggle the date format!
-    {{ user.todaysDate | date: format }}
-  </p>
-  <button (click)="toggleFormat()">Toggle the date</button>
-  <form action="">
-    <p>Let's enter some into below:</p>
-    <label for="">Name:</label>
-    <input [(ngModel)]="user.firstName" />
-  </form>
+
+  <div class="bg-red">
+    <h2>Formatting and Chaining Pipes:</h2>
+    <p>
+      {{ user.todaysDate | date: "MMMM" | uppercase }}
+    </p>
+    <p>
+      Toggle the date format!
+      {{ user.todaysDate | date: formatDate }}
+    </p>
+    <button (click)="toggleDateFormat()">Toggle the date</button>
+  </div>
+
+  <div class="bg-blue">
+    <h2>Creating pipes for custom data transformations</h2>
+    <p>
+      How much is $1.00 CAD in USD?
+
+      <!-- have to write US bc that is the default so it won't show  -->
+      {{ currencyConverter.initialValue | currency: "CAD" }} = US
+      {{ currencyConverter.initialValue * 0.79 | currency: "USD" }}
+    </p>
+    <p>
+      How much is $1.00 CAD in EU?
+      {{ currencyConverter.initialValue | currency: "CAD" }} =
+      {{ currencyConverter.initialValue | convert | currency: "EUR" }}
+    </p>
+  </div>
+
+  <div class="bg-green">
+    <h2>Detecting changes with data binding in pipes</h2>
+    <select [(ngModel)]="selectedProvince">
+      <option
+        *ngFor="let province of provinces"
+        [value]="province.name"
+        [attr.selected]="province.name"
+      >
+        {{ province.name }}
+      </option>
+    </select>
+  </div>
 </section>
