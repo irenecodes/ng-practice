@@ -7,12 +7,12 @@
 
 ## List
 
-- [ ] Pipes
+- [x] Pipes
 - [ ] Interfaces
 - [ ] Services
 - [ ] Directives
 - [ ] Forms - Template, Reactive, Lib
-- [ ] NgRx/store
+- [ ] NgRx/store - https://coursetro.com/posts/code/151/Angular-Ngrx-Store-Tutorial---Learn-Angular-State-Management, https://www.youtube.com/watch?v=9P5DTlg9oLc&t=127s
 - [ ] ngx-translate/core
 - [ ] Observables - go through FEM
 - [ ] Auth - https://docs.amplify.aws/lib/auth/getting-started/q/platform/js
