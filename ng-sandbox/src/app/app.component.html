@@ -62,3 +62,49 @@
 <h2>NgRx Store</h2>
 <app-create></app-create>
 <app-read></app-read>
+
+<p>
+  <a
+    href="https://blog.angular-university.io/introduction-to-angular-2-forms-template-driven-vs-model-driven/"
+    >Learning Source for Template Driven Forms</a
+  >
+</p>
+<section>
+  <h1>Template-driven Forms:</h1>
+
+  <p><strong>Pros:</strong></p>
+  <ul>
+    <li>Initial simplicity is within scope for small-medium sized forms</li>
+    <li>Template code is cleaner and focuses only on presentation logic</li>
+  </ul>
+  <p><strong>Cons:</strong></p>
+  <ul>
+    <li>
+      Can become hard to read and maintain to keep form validation rules within
+      template. Adding more validator tags to a field or adding cross-field
+      validations will decrease readbility and maintainability.
+    </li>
+    <li>Validation logic can't be easily unit tested</li>
+  </ul>
+</section>
+
+<section>
+  <h1>Reactive Forms:</h1>
+
+  <p><strong>Pros:</strong></p>
+  <ul>
+    <li>Business logic in component class - can be unit tested more easily</li>
+    <li>
+      Moving form model definition to component makes it easy to define form
+      dynamically so easier to implement more advanced use cases
+    </li>
+    <li>easier to create custom validator</li>
+  </ul>
+
+  <p>
+    <strong>Key difference:</strong> Reactive forms module allows to define form
+    modal programmatically instead of declaratively via the view.
+  </p>
+</section>
+
+<app-reactive-form></app-reactive-form>

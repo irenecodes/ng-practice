@@ -11,6 +11,7 @@ import { StoreModule } from '@ngrx/store';
 import { reducer } from '../reducers/tutorial.reducer';
 import { ReadComponent } from '../app/read/read.component';
 import { CreateComponent } from '../app/create/create.component';
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { CreateComponent } from '../app/create/create.component';
     AppComponent,
     ConvertPipe,
     ReadComponent,
-    CreateComponent
+    CreateComponent,
+    ReactiveFormComponent
   ],
   imports: [
     BrowserModule,

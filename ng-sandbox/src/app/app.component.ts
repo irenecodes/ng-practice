@@ -8,12 +8,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'Time to Practice Some Pipes';
+  title = 'Irene\'s Sandbox';
   user = {
     userID: 1,
     firstName: 'Irene',
     lastName: 'Truong',
-    todaysDate: new Date()
+    todaysDate: new Date(),
+    password: 'test'
   }
   
   toggle = true;
@@ -87,6 +88,11 @@ export class AppComponent {
     }
     
   ]
+
+  // for template driven form 
+  onSubmitTemplateBased(user) {
+    console.log(user);
+  }
 
 
 }
