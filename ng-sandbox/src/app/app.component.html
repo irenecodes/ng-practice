@@ -70,7 +70,7 @@
   >
 </p>
 <section>
-  <h1>Template-driven Forms:</h1>
+  <h2>Template-driven Forms:</h2>
 
   <p><strong>Pros:</strong></p>
   <ul>
@@ -89,7 +89,7 @@
 </section>
 
 <section>
-  <h1>Reactive Forms:</h1>
+  <h2>Reactive Forms:</h2>
 
   <p><strong>Pros:</strong></p>
   <ul>
@@ -108,3 +108,35 @@
 </section>
 
 <app-reactive-form></app-reactive-form>
+
+<section>
+  <h2>Directives</h2>
+  <h3>Built-in Directives</h3>
+  <ul>
+    <li>NgClass</li>
+    <li>NgStyle</li>
+    <li>NgModel</li>
+  </ul>
+
+  <h4>NgClass</h4>
+  <div [ngClass]="isSpecial ? 'special' : ''">This div is special</div>
+  <p>currentClasses is {{ currentClasses | json }}</p>
+  <!-- Adding an ngClass property binding to currentClasses sets the element's classes accordingly: -->
+  <div [ngClass]="currentClasses">
+    This div is initially saveable, unchanged, and special.
+  </div>
+  <!-- Remember that in this situation you'd call setCurrentClasses(), both initially and when the dependent properties change. -->
+
+  <h4>ngModel (2-way) binding</h4>
+  <label for="example-ngModel">[(ngModel)]:</label>
+  <input [(ngModel)]="currentItem.name" id="example-ngModel" />
+  <p>Name: {{ currentItem.name }}</p>
+
+  <h5>without ngModel</h5>
+  <label for="without">without NgModel:</label>
+  <input
+    [value]="currentItem.name"
+    (input)="currentItem.name = $event.target.value"
+    id="without"
+  />
+</section>
