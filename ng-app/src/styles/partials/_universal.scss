@@ -1,0 +1,72 @@
+// stripping styles
+* {
+  padding: 0;
+  margin: 0;
+  line-height: 1.6;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 10px;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+}
+
+main {
+  overflow: hidden;
+}
+
+.wrapper {
+  @include wrapper;
+}
+
+.skip-link {
+  position: absolute;
+  left: -1000px;
+  top: 5px;
+  z-index: 999;
+  background: black;
+  color: white;
+}
+
+.skip-link:focus {
+  left: 0;
+}
+
+// header
+header {
+  border-bottom: 4px solid $primary;
+  nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 0;
+  }
+  ul {
+    display: flex;
+    justify-content: space-between;
+  }
+  li {
+    padding: 0 5px;
+    margin: 0 40px;
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}
