@@ -70,3 +70,20 @@ header {
     }
   }
 }
+
+footer {
+  background-color: $primary;
+  p {
+    padding: 20px 0;
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+.default-bg {
+  height: 75vh;
+  background: url("./images/DefaultBackground.jpg") no-repeat;
+  // background: red;
+  background-size: cover;
+  background-position: 0 0%;
+}

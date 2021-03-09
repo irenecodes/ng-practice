@@ -16,6 +16,10 @@ import { StoreModule } from '@ngrx/store';
 // Components 
 import { HeaderComponent } from './shared/components/header/header.component';
 import { SignUpPageComponent } from './pages/sign-up-page/sign-up-page.component';
+import { LandingPageComponent } from './pages/landing-page/landing-page.component';
+import { NotFoundPageComponent } from './pages/not-found-page/not-found-page.component';
+import { FooterComponent } from './shared/components/footer/footer.component';
+import { FavouritesPageComponent } from './pages/favourites-page/favourites-page.component';
 // import { reducer } from '../reducers/tutorial.reducer';
 
 
@@ -30,6 +34,10 @@ export function createTranslateLoader(http: HttpClient) {
     AppComponent,
     HeaderComponent,
     SignUpPageComponent,
+    LandingPageComponent,
+    NotFoundPageComponent,
+    FooterComponent,
+    FavouritesPageComponent,
 
   ],
   imports: [
